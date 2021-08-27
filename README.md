@@ -21,9 +21,9 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [Extensions for Python projects:](#extensions-for-python-projects)
     - [Auto Format Python Code](#auto-format-python-code)
     - [Linting](#linting)
+  - [6. Additional Tools](#6-additional-tools)
 
 TODO:
-- Additional Tools
 - Git
 - Crawling
 - API
@@ -169,3 +169,12 @@ Linting highlights syntactical and stylistic problems in your Python source code
 If you have installed [PyLance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) from Python extension above, you'll be able to see your coding mistakes in real-time, such as syntax error, undefined variable, etc.
 
 For stricter linting: https://code.visualstudio.com/docs/python/linting
+
+## 6. Additional Tools
+In developing apps, we may not only work within the code editor only. There are recommended tools to work with:
+- MySQL Client: [HeidiSQL](https://www.heidisql.com/) (Windows) or [MySQLWorkbench](https://www.mysql.com/products/workbench/) 
+- MongoDB: [Robo3T](https://robomongo.org/download)
+- SSH Terminal: [Termius](https://termius.com/)
+- API testing: [Postman](https://www.postman.com/)
+
+
