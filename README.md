@@ -35,6 +35,7 @@ TODO:
 ## 1. Company Values & Vision
 
 I'll leave it to Jay. lol
+
 But at least you should know now about:
 
 > "We connect every possible data and make them useful"
