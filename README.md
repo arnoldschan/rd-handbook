@@ -17,13 +17,15 @@ This handbook is specifically for R&D team focused on Python Backend engineering
   - [4. Python Code Style - PEP8](#4-python-code-style---pep8)
     - [Highlights](#highlights)
   - [5. Code Editor](#5-code-editor)
-    - [Must have extensions for any projects:](#must-have-extensions-for-any-projects)
+    - [Must-have extensions for any projects:](#must-have-extensions-for-any-projects)
     - [Extensions for Python projects:](#extensions-for-python-projects)
     - [Auto Format Python Code](#auto-format-python-code)
     - [Linting](#linting)
   - [6. Additional Tools](#6-additional-tools)
   - [7. Git](#7-git)
   - [8. Crawler](#8-crawler)
+    - [Crawler of choice](#crawler-of-choice)
+    - [CrawlerHub](#crawlerhub)
     - [VS Code Python Extensions](#vs-code-python-extensions)
     - [Data Structure & Algorithms](#data-structure--algorithms)
     - [Design Patterns](#design-patterns)
@@ -202,19 +204,30 @@ There are 2 types of websites:
 - Static website (ex: https://www.ptt.cc/): load once, no additional data loaded in any user action.
 - Dynamic website (ex: https://www.instagram.com/): new posts are loaded as users scroll through the page.
   
+### Crawler of choice
 We mainly use:
 - Simple [`requests`](https://docs.python-requests.org/en/master/) and [`bs4`](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) for static website & small project.
 - Simple [`requests`](https://docs.python-requests.org/en/master/) with Python dictionaries processing for a dynamic website. [Learn More](https://www.pluralsight.com/guides/advanced-web-scraping-tactics-python-playbook#module-dynamicpagesorclientsiderendering) in part of "Handling AJAX Loading and Infinite Loading"
-- `selenium` or android emulator for static & dynamic websites with bot detection ability. 
+- [`selenium`](https://selenium-python.readthedocs.io/) or android emulator for static & dynamic websites with bot detection ability. 
 - add ons with proxy to lower the detection.
 
+### CrawlerHub
 During the time of writing, we have [CrawlerHub](https://git.lndata.com/rd_projects/crawlers-hub) as the central system of all crawlers we have created. This project is to:
 - Have an easier API to crawl data, for example: pass a keyword and you'll get IG data.
 - Increase maintainability.
   - Imagine having 3 PTT crawlers at 3 different projects. Once PTT updates their site, we have to manually update the crawler across 3 projects.
   - With CrawlerHub we only need to update once
+
 You can try the CrawlerHub API at http://54.248.141.206/api/v1.0/
 
+We currently have:
+- Instagram (private API + proxy)
+- KKbox (with credentials)
+- Youtube (official API)
+- Youtube (private API)
+- Mobile01 (MoreAPI + HTML scraper + proxy)
+- Pixnet (HTML scraper + private API)
+  
 However, we are planning to move all of the available crawlers to [Scrapy](https://scrapy.org/) for better crawler management. Maybe you can make it happen!
 
 
