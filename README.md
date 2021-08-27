@@ -51,6 +51,8 @@ also bonus:
 
 Basically, `venv` isolates `pip` & `python` installed packages from any other project. `venv` also helps to make our project lightweight because `venv` make sure we only pack our app with it's needed dependencies. Something like this:
 ![python virtual environment](https://miro.medium.com/max/600/1*R8lpim7cQoZN1K31QcMBPw.jpeg)
+
+In the example above, there are 3 projects inside one computer. And each project needs different dependencies one to another. The first project need `Python 2.7` with 2 dependencies with certain version. While the other 2 projects uses entirely different Python version and dependencies version.
 Make sure you've installed Python 3.6+
 There are multiple ways to create virtual environment, such as `venv`, `pyenv`, `pipenv`, etc.
 We mainly use the built-in virtual environment [`venv`](https://docs.python.org/3/library/venv.html)
