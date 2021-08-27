@@ -58,21 +58,31 @@ We mainly use the built-in virtual environment [`venv`](https://docs.python.org/
 Commands:
 
 - Make sure you're in the project directory
-- `python3 -m venv .venv` (meaning create `venv` under `.venv` directory), then
-- `source .venv/bin/activate` to "use" the virtual environment
+  >`python3 -m venv .venv` 
+
+  meaning create `venv` under `.venv` directory), then
+- >`source .venv/bin/activate`
+  
+  to "use" the virtual environment
   The terminal should now start with `(.venv)` meaning you're under the virtual environment
-  If you check: - `pip list` this should only contains the essential python packages
-- `deactivate` to get out from the virtual environment
+  
+  If you check: 
+    >`pip list`
+    
+    this should only contains the essential python packages
+- >`deactivate` 
+  
+  to get out from the virtual environment
 
 Virtual environment is really helpful to isolate the installed packages for the project.
 
 “Requirements files” are files containing a list of items to be installed using pip install like so:
 We have to generate `requirements.txt` in every project we created, with:
 
-`pip freeze > requirements.txt`
+>`pip freeze > requirements.txt`
 
 Please update the `requirements.txt` by each new installed packages in the project.
 
 With the `requirements.txt` exist in the project. We can install all the project's dependencies at once with:
 
-`pip install -r requirements.txt`
+>`pip install -r requirements.txt`
