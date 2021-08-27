@@ -23,7 +23,7 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [Linting](#linting)
   - [6. Additional Tools](#6-additional-tools)
   - [7. Git](#7-git)
-  - [5. Python Advanced Programming](#5-python-advanced-programming)
+  - [8. Crawler](#8-crawler)
     - [VS Code Python Extensions](#vs-code-python-extensions)
     - [Data Structure & Algorithms](#data-structure--algorithms)
     - [Design Patterns](#design-patterns)
@@ -196,7 +196,26 @@ Unless you're a terminal type of person you should learn at least:
 - git commit [...]
 - git push
 
-## 5. Python Advanced Programming
+## 8. Crawler
+Crawling data is the backbone of our social tools.
+There are 2 types of website:
+- Static website (ex: https://www.ptt.cc/): load once, no additional data loaded in any user action.
+- Dynamic website (ex: https://www.instagram.com/): new posts are loaded as user scroll through the page.
+  
+We mainly use:
+- Simple [`requests`](https://docs.python-requests.org/en/master/) and [`bs4`](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) for static website & small project.
+- Simple [`requests`](https://docs.python-requests.org/en/master/) with Python dictionaries processing for dynamic website. [Learn More](https://www.pluralsight.com/guides/advanced-web-scraping-tactics-python-playbook#module-dynamicpagesorclientsiderendering) in part of "Handling AJAX Loading and Infinite Loading"
+- `selenium` or android emulator for static & dynamic website with bot detection ability. 
+- add ons with proxy to lower the detection.
+
+During the time of writing, we have [CrawlerHub](https://git.lndata.com/rd_projects/crawlers-hub) as the central system of all crawler we have created. This project is to:
+- Have an easier API to crawl data, example: pass a keyword and you'll get IG data.
+- Increase maintainability.
+  - Imagine to have 3 PTT crawler at 3 different projects. Once PTT update their site, we have to manually update the crawler across 3 projects.
+  - With CrawlerHub we only need to update once
+You can try the CrawlerHub API in http://54.248.141.206/api/v1.0/
+
+However, we are planning to move all of the available crawler to [Scrapy](https://scrapy.org/) for better crawler management. Maybe you can make it happen!
 This is an advanced Python programming section. If you want to write Python code in a professional, faster, clean, and reusable way, please learn more from this section.
 
 ### VS Code Python Extensions
