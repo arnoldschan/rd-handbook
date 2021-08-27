@@ -26,6 +26,11 @@ This handbook is specifically for R&D team focused on Python Backend engineering
   - [8. Crawler](#8-crawler)
     - [Crawler of choice](#crawler-of-choice)
     - [CrawlerHub](#crawlerhub)
+  - [9. API](#9-api)
+    - [Framework of choice](#framework-of-choice)
+    - [Best practice](#best-practice)
+      - [API](#api)
+      - [Django](#django)
     - [VS Code Python Extensions](#vs-code-python-extensions)
     - [Data Structure & Algorithms](#data-structure--algorithms)
     - [Design Patterns](#design-patterns)
@@ -230,10 +235,30 @@ We currently have:
   
 However, we are planning to move all of the available crawlers to [Scrapy](https://scrapy.org/) for better crawler management. Maybe you can make it happen!
 
+## 9. API
+There are two kinds of API:
+1. API for platform websites to get data from the database
+2. Microservices API such as [CrawlerHub](#crawlerhub), Gender guesser API, etc
 
+For #1 API, usually, the front-end team creates their own API using NodeJS. However, for some projects, our team (Python) creates the API. The #2 API so far Python team creates the API.
 
+### Framework of choice
+1. [Flask](https://flask.palletsprojects.com/en/2.0.x/): create the API everything from the ground up. Takes time to build a bigger project, but is easier to understand. Security is not embedded.
+2. [Django](https://www.djangoproject.com/) + [DRF](https://www.django-rest-framework.org/): Currently the better choice in creating API faster and more secure. But it is harder to learn (because they have everything built-in) compared to Flask.
 
+We have Flask as the framework for the older project (such as CrawlerHub). However, we are planning to use Django for future API projects (bigger ones) for having better maintainability.
 
+### Best practice
+#### API
+So far we are still learning how to create a better API.
+
+One thing that we know we shouldn't do is having API without doing a [versioning](https://www.django-rest-framework.org/api-guide/versioning/). This will create an inconsistent API and will be a hard time for any of the project that uses the API.
+
+#### Django
+I don't know much. but
+> Fat models are preferred to fat views.
+
+Maybe [this](https://github.com/HackSoftware/Django-Styleguide) helps.
 This is an advanced Python programming section. If you want to write Python code in a professional, faster, clean, and reusable way, please learn more from this section.
 
 ### VS Code Python Extensions
