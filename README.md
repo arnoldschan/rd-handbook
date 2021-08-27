@@ -22,6 +22,13 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [Auto Format Python Code](#auto-format-python-code)
     - [Linting](#linting)
   - [6. Additional Tools](#6-additional-tools)
+  - [7. Git](#7-git)
+  - [5. Python Advanced Programming](#5-python-advanced-programming)
+    - [VS Code Python Extensions](#vs-code-python-extensions)
+    - [Data Structure & Algorithms](#data-structure--algorithms)
+    - [Design Patterns](#design-patterns)
+    - [OOP principles: SOLID](#oop-principles-solid)
+
 
 TODO:
 - Git
@@ -177,4 +184,53 @@ In developing apps, we may not only work within the code editor only. There are 
 - SSH Terminal: [Termius](https://termius.com/)
 - API testing: [Postman](https://www.postman.com/)
 
+## 7. Git
+You must have heard [Github](https://github.com/) before, right? It's not only to get other people's code, but it's mainly a Version Control Software (VCS). Github basically a Git that backed by community. 
 
+Git tracks every change you made to the source code with a customized message attached to every change. Without it, if you need a revision or work in the same file across team, it will be a mess. 
+
+`git clone`, `git stage`, `git commit`, 
+> git push
+
+
+
+## 5. Python Advanced Programming
+This is an advanced Python programming section. If you want to write Python code in a professional, faster, clean, and reusable way, please learn more from this section.
+
+### VS Code Python Extensions
+See more what VS Code can help us to write Python faster [Click Here](https://code.visualstudio.com/docs/python/editing)
+### Data Structure & Algorithms
+How to efficiently use python built-in object type.
+
+Simple example:
+
+To check saved information:
+```Python
+list_example = [1, 2, 3, 4]
+find_number = 3
+for i in list_example:
+    if i == find_number:
+        print("FOUND!")
+        break
+```
+The Big-O Notation: O<sup>n</sup>
+
+is slower than (notice with the `list` and `dict` difference)
+```Python
+dict_example = {1: True, 2: True, 3: True, 4: True }
+find_number = 3
+if dict_example.get(find_number):
+    print("FOUND!")
+```
+With Big-O Notation: O<sup>1</sup>
+
+
+So no matter how long is the list, the execution time will be the same.
+
+https://towardsdatascience.com/data-structures-algorithms-in-python-68c8dbb19c90
+### Design Patterns
+https://refactoring.guru/design-patterns/python
+### OOP principles: SOLID
+https://levelup.gitconnected.com/s-o-l-i-d-principles-explained-in-python-with-examples-83b2b43bdcde
+
+And so on... 
