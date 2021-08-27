@@ -14,9 +14,11 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [Definition](#definition)
     - [How to use them](#how-to-use-them)
     - [Requirements files](#requirements-files)
+  - [4. Python Code Style - PEP8](#4-python-code-style---pep8)
+    - [Highlights](#highlights)
 
 TODO:
-- Python Code Style - PEP8
+- Design Patterns https://refactoring.guru/design-patterns/python
 - Code Editor
 - Additional Tools
 - Git
@@ -93,3 +95,30 @@ Please update the `requirements.txt` for each newly installed packages in the pr
 With the `requirements.txt` exist in the project. We can install all the project's dependencies at once with:
 
 >`pip install -r requirements.txt`
+
+
+## 4. Python Code Style - PEP8
+We are all inconsistent in coding. Please, at least you still trying to be consistent.
+Have you ever read PEP8 before? Make sure you have at least once, scanning is fine [> CLICK HERE <](https://www.python.org/dev/peps/pep-0008/)
+
+PEP8 is a standard way to write Python. Example:
+- If in JavaScript we type variable in [`camelCase`](https://en.wikipedia.org/wiki/Camel_case).
+- in Python, we write them in [`snake_case`](https://en.wikipedia.org/wiki/Snake_case).
+
+### Highlights
+- Use [PascalCase](http://wiki.c2.com/?PascalCase) to define Python class.
+- Use `UPPER_CASE_WITH_UNDERSCORES` to define constant.
+- Use `snake_case` to define everything else like variables, functions,
+- Do not do `Capitalized_Words_With_Underscores` or `Mixing_theCase` as it's not consistent and ugly
+- Name your variable clearly. Yes, avoid `x`, `y`, `a`, `b`, or `n` as it doesn't explain and it is too short. `longer_naming_but_very_clear_definition` however is preferable (but still try to be as concise as possible!).
+- Code split
+- Give a line break with escaping backslash `\` or simple `return` if one code line is too long
+- Give appropriate spacing, such as:
+  - x+y ➤ x + y
+  - [1,2,3] ➤ [1, 2, 3]
+
+About Code formatting (spaces, line width, indentation, and so on)
+You can automate the formatting of your code in every file save. That'll be explained later in [HERE]()
+
+However, variable naming, app design, or code splitting still relies on the developer's effort. So don't stop learning :)
+
