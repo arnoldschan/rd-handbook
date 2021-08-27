@@ -31,7 +31,6 @@ This handbook is specifically for R&D team focused on Python Backend engineering
 
 
 TODO:
-- Git
 - Crawling
 - API
 - Cloud
@@ -189,10 +188,13 @@ You must have heard [Github](https://github.com/) before, right? It's not only t
 
 Git tracks every change you made to the source code with a customized message attached to every change. Without it, if you need a revision or work in the same file across team, it will be a mess. 
 
-`git clone`, `git stage`, `git commit`, 
-> git push
+all of the git activity can be done through GitLens ([see VS Code extension](#must-have-extensions-for-any-projects)), such as `git clone`, `git add`, `git commit`.
 
-
+Unless you're a terminal type of person you should learn at least:
+- git clone [...]
+- git add [...]
+- git commit [...]
+- git push
 
 ## 5. Python Advanced Programming
 This is an advanced Python programming section. If you want to write Python code in a professional, faster, clean, and reusable way, please learn more from this section.
