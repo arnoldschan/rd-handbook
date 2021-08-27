@@ -16,10 +16,13 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [Requirements files](#requirements-files)
   - [4. Python Code Style - PEP8](#4-python-code-style---pep8)
     - [Highlights](#highlights)
+  - [5. Code Editor](#5-code-editor)
+    - [Must have extensions for any projects:](#must-have-extensions-for-any-projects)
+    - [Extensions for Python projects:](#extensions-for-python-projects)
+    - [Auto Format Python Code](#auto-format-python-code)
+    - [Linting](#linting)
 
 TODO:
-- Design Patterns https://refactoring.guru/design-patterns/python
-- Code Editor
 - Additional Tools
 - Git
 - Crawling
@@ -122,3 +125,35 @@ You can automate the formatting of your code in every file save. That'll be expl
 
 However, variable naming, app design, or code splitting still relies on the developer's effort. So don't stop learning :)
 
+## 5. Code Editor
+In LnData, we mainly use [VS Code](https://code.visualstudio.com/) in coding. Why?
+- It's owned by Microsoft, so it'll keep be updated.
+- It's flexible, can write any programming language on it
+- Can be extended with plenty of extensions choices.
+
+
+### Must have extensions for any projects:
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): to extend vscode's built-in git.
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): to automatically configure the code format, such as number of space, trailing space, etc.
+- [Conventional Commit](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits): to standardize commit message.
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph): to visualize the project's git branches in graph.
+
+You can see the attached `.vscode` extension recommendation file in [HERE](attachment/any-project/.vscode/)
+
+### Extensions for Python projects:
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): all in one extension pack for Python. My favourite is the typing prediction.
+- [Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring): to auto template the docstring. 
+
+You can see the attached `.vscode` extension recommendation file in [HERE](attachment/python-project/.vscode/)
+
+### Auto Format Python Code
+VS code able to reformat the code automatically on each save. 
+- `pip install autopep8` 
+- on VS Code: `Settings (Ctrl+,) ` > `Search "Format on Save"` > `Check the setting "Editor: Format On Save"`
+- Voila! Now if your Python code doesn't follow PEP8 formatting it'll be fixed on each save.
+
+### Linting
+Linting highlights syntactical and stylistic problems in your Python source code without running your code base.
+If you have installed [PyLance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) from Python extension above, you'll be able to see your coding mistakes in real-time, such as syntax error, undefined variable, etc.
+
+For stricter linting: https://code.visualstudio.com/docs/python/linting

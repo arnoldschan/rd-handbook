@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "eamodio.gitlens",
+    "vivaxy.vscode-conventional-commits",
+    "mhutchie.git-graph"
+  ]
+}
