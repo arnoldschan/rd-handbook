@@ -122,7 +122,7 @@ PEP8 is a standard way to write Python. Example:
   - [1,2,3] ➤ [1, 2, 3]
 
 About Code formatting (spaces, line width, indentation, and so on)
-You can automate the formatting of your code in every file save. That'll be explained later in [HERE]()
+You can automate the formatting of your code in every file save. That'll be explained later in [HERE](#auto-format-python-code)
 
 However, variable naming, app design, or code splitting still relies on the developer's effort. So don't stop learning :)
 
@@ -148,10 +148,21 @@ You can see the attached `.vscode` extension recommendation file in [HERE](attac
 You can see the attached `.vscode` extension recommendation file in [HERE](attachment/python-project/.vscode/)
 
 ### Auto Format Python Code
+![AutoFormat](https://user-images.githubusercontent.com/17570430/66901870-d32ab080-efff-11e9-99f3-39d09ef32ffa.gif)
 VS code able to reformat the code automatically on each save. 
-- `pip install autopep8` 
+- Make sure you're under virtual environment
+- `pip install black` 
 - on VS Code: `Settings (Ctrl+,) ` > `Search "Format on Save"` > `Check the setting "Editor: Format On Save"`
+- `> Search "Python Formatting Provider"` > `Choose "black"`
 - Voila! Now if your Python code doesn't follow PEP8 formatting it'll be fixed on each save.
+
+or you can add these two settings:
+```
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black"
+```
+under your VS Code > `(Ctrl+Shift+P)`> Choose `Preferences: Open Settings (JSON)`
+
 
 ### Linting
 Linting highlights syntactical and stylistic problems in your Python source code without running your code base.
