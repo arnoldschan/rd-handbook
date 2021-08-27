@@ -11,6 +11,9 @@ This handbook is specifically for R&D team focused on Python Backend engineering
   - [1. Company Values & Vision](#1-company-values--vision)
   - [2. Unix Basic Command](#2-unix-basic-command)
   - [3. Python Virtual Environment (venv)](#3-python-virtual-environment-venv)
+    - [Definition](#definition)
+    - [How to use them](#how-to-use-them)
+    - [Requirements files](#requirements-files)
 
 TODO:
 - Python Code Style - PEP8
@@ -48,11 +51,14 @@ also bonus:
 - `vi` (edit text file without any GUI)
 
 ## 3. Python Virtual Environment (venv)
+### Definition
 
 Basically, `venv` isolates `pip` & `python` installed packages from any other project. `venv` also helps to make our project lightweight because `venv` make sure we only pack our app with it's needed dependencies. Something like this:
 ![python virtual environment](https://miro.medium.com/max/600/1*R8lpim7cQoZN1K31QcMBPw.jpeg)
 
 In the example above, there are 3 projects inside one computer. And each project needs different dependencies one to another. The first project need `Python 2.7` with 2 dependencies with certain version. While the other 2 projects uses entirely different Python version and dependencies version.
+
+### How to use them
 Make sure you've installed Python 3.6+
 There are multiple ways to create virtual environment, such as `venv`, `pyenv`, `pipenv`, etc.
 We mainly use the built-in virtual environment [`venv`](https://docs.python.org/3/library/venv.html)
@@ -70,14 +76,13 @@ Commands:
   
   If you check: 
     >`pip list`
-    
+
     this should only contains the essential python packages
 - >`deactivate` 
   
   to get out from the virtual environment
 
-Virtual environment is really helpful to isolate the installed packages for the project.
-
+### Requirements files
 “Requirements files” are files containing a list of items to be installed using pip install like so:
 We have to generate `requirements.txt` in every project we created, with:
 
