@@ -65,10 +65,10 @@ also bonus:
 ## 3. Python Virtual Environment (venv)
 ### Definition
 
-Basically, `venv` isolates `pip` & `python` installed packages from any other project. `venv` also helps to make our project lightweight because `venv` makes sure we only pack our app with it's needed dependencies. Something like this:
+Basically, `venv` isolates `pip` & `python` installed packages from any other project. `venv` also helps to make our project lightweight because `venv` makes sure we only pack our app with its needed dependencies. Something like this:
 ![python virtual environment](https://miro.medium.com/max/600/1*R8lpim7cQoZN1K31QcMBPw.jpeg)
 
-In the example above, there are 3 projects inside one computer. And each project needs different dependencies from one to another. The first project needs `Python 2.7` with 2 dependencies with a certain version. While the other 2 projects use entirely different Python version and dependencies version.
+In the example above, there are 3 projects inside one computer. And each project needs different dependencies from one to another. The first project needs `Python 2.7` with 2 dependencies with a certain version. While the other 2 projects use entirely different Python versions and dependencies version.
 
 ### How to use them
 Make sure you've installed Python 3.6+
@@ -134,29 +134,29 @@ However, variable naming, app design, or code splitting still relies on the deve
 
 ## 5. Code Editor
 In LnData, we mainly use [VS Code](https://code.visualstudio.com/) in coding. Why?
-- It's owned by Microsoft, so it'll keep be updated.
+- It's owned by Microsoft, so it'll keep being updated.
 - It's flexible, can write any programming language on it
 - Can be extended with plenty of extensions choices.
 
 
-### Must have extensions for any projects:
-- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): to extend vscode's built-in git.
-- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): to automatically configure the code format, such as number of space, trailing space, etc.
+### Must-have extensions for any projects:
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): to extend VS code's built-in git.
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): to automatically configure the code format, such as the number of space, trailing space, etc.
 - [Conventional Commit](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits): to standardize commit message.
-- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph): to visualize the project's git branches in graph.
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph): to visualize the project's git branches in a graph.
 
 You can see the attached `.vscode` extension recommendation file in [HERE](attachment/any-project/.vscode/)
 
 ### Extensions for Python projects:
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): all in one extension pack for Python. My favourite is the typing prediction.
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python): all in one extension pack for Python. My favorite is the typing prediction.
 - [Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring): to auto template the docstring. 
 
 You can see the attached `.vscode` extension recommendation file in [HERE](attachment/python-project/.vscode/)
 
 ### Auto Format Python Code
 ![AutoFormat](https://user-images.githubusercontent.com/17570430/66901870-d32ab080-efff-11e9-99f3-39d09ef32ffa.gif)
-VS code able to reformat the code automatically on each save. 
-- Make sure you're under virtual environment
+VS code is able to reformat the code automatically on each save. 
+- Make sure you're in virtual environment
 - `pip install black` 
 - on VS Code: `Settings (Ctrl+,) ` > `Search "Format on Save"` > `Check the setting "Editor: Format On Save"`
 - `> Search "Python Formatting Provider"` > `Choose "black"`
@@ -171,8 +171,8 @@ under your VS Code > `(Ctrl+Shift+P)`> Choose `Preferences: Open Settings (JSON)
 
 
 ### Linting
-Linting highlights syntactical and stylistic problems in your Python source code without running your code base.
-If you have installed [PyLance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) from Python extension above, you'll be able to see your coding mistakes in real-time, such as syntax error, undefined variable, etc.
+Linting highlights syntactical and stylistic problems in your Python source code without running your codebase.
+If you have installed [PyLance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) from the Python extension above, you'll be able to see your coding mistakes in real-time, such as syntax error, undefined variable, etc.
 
 For stricter linting: https://code.visualstudio.com/docs/python/linting
 
@@ -184,9 +184,9 @@ In developing apps, we may not only work within the code editor only. There are 
 - API testing: [Postman](https://www.postman.com/)
 
 ## 7. Git
-You must have heard [Github](https://github.com/) before, right? It's not only to get other people's code, but it's mainly a Version Control Software (VCS). Github basically a Git that backed by community. 
+You must have heard [Github](https://github.com/) before, right? It's not only to get other people's code, but it's mainly a Version Control Software (VCS). Github is basically a Git that is backed by the community. 
 
-Git tracks every change you made to the source code with a customized message attached to every change. Without it, if you need a revision or work in the same file across team, it will be a mess. 
+Git tracks every change you made to the source code with a customized message attached to every change. Without it, if you need a revision or work in the same file across the team, it will be a mess. 
 
 all of the git activity can be done through GitLens ([see VS Code extension](#must-have-extensions-for-any-projects)), such as `git clone`, `git add`, `git commit`.
 
@@ -198,24 +198,29 @@ Unless you're a terminal type of person you should learn at least:
 
 ## 8. Crawler
 Crawling data is the backbone of our social tools.
-There are 2 types of website:
+There are 2 types of websites:
 - Static website (ex: https://www.ptt.cc/): load once, no additional data loaded in any user action.
-- Dynamic website (ex: https://www.instagram.com/): new posts are loaded as user scroll through the page.
+- Dynamic website (ex: https://www.instagram.com/): new posts are loaded as users scroll through the page.
   
 We mainly use:
 - Simple [`requests`](https://docs.python-requests.org/en/master/) and [`bs4`](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) for static website & small project.
-- Simple [`requests`](https://docs.python-requests.org/en/master/) with Python dictionaries processing for dynamic website. [Learn More](https://www.pluralsight.com/guides/advanced-web-scraping-tactics-python-playbook#module-dynamicpagesorclientsiderendering) in part of "Handling AJAX Loading and Infinite Loading"
-- `selenium` or android emulator for static & dynamic website with bot detection ability. 
+- Simple [`requests`](https://docs.python-requests.org/en/master/) with Python dictionaries processing for a dynamic website. [Learn More](https://www.pluralsight.com/guides/advanced-web-scraping-tactics-python-playbook#module-dynamicpagesorclientsiderendering) in part of "Handling AJAX Loading and Infinite Loading"
+- `selenium` or android emulator for static & dynamic websites with bot detection ability. 
 - add ons with proxy to lower the detection.
 
-During the time of writing, we have [CrawlerHub](https://git.lndata.com/rd_projects/crawlers-hub) as the central system of all crawler we have created. This project is to:
-- Have an easier API to crawl data, example: pass a keyword and you'll get IG data.
+During the time of writing, we have [CrawlerHub](https://git.lndata.com/rd_projects/crawlers-hub) as the central system of all crawlers we have created. This project is to:
+- Have an easier API to crawl data, for example: pass a keyword and you'll get IG data.
 - Increase maintainability.
-  - Imagine to have 3 PTT crawler at 3 different projects. Once PTT update their site, we have to manually update the crawler across 3 projects.
+  - Imagine having 3 PTT crawlers at 3 different projects. Once PTT updates their site, we have to manually update the crawler across 3 projects.
   - With CrawlerHub we only need to update once
-You can try the CrawlerHub API in http://54.248.141.206/api/v1.0/
+You can try the CrawlerHub API at http://54.248.141.206/api/v1.0/
 
-However, we are planning to move all of the available crawler to [Scrapy](https://scrapy.org/) for better crawler management. Maybe you can make it happen!
+However, we are planning to move all of the available crawlers to [Scrapy](https://scrapy.org/) for better crawler management. Maybe you can make it happen!
+
+
+
+
+
 This is an advanced Python programming section. If you want to write Python code in a professional, faster, clean, and reusable way, please learn more from this section.
 
 ### VS Code Python Extensions
