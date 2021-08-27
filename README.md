@@ -213,6 +213,7 @@ There are 2 types of websites:
 We mainly use:
 - Simple [`requests`](https://docs.python-requests.org/en/master/) and [`bs4`](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) for static website & small project.
 - Simple [`requests`](https://docs.python-requests.org/en/master/) with Python dictionaries processing for a dynamic website. [Learn More](https://www.pluralsight.com/guides/advanced-web-scraping-tactics-python-playbook#module-dynamicpagesorclientsiderendering) in part of "Handling AJAX Loading and Infinite Loading"
+  - One good method to process dictionaries: [JMESPath](https://jmespath.org/)
 - [`selenium`](https://selenium-python.readthedocs.io/) or android emulator for static & dynamic websites with bot detection ability. 
 - add ons with proxy to lower the detection.
 
