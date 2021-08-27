@@ -39,7 +39,7 @@ Let's just get to the technical guidelines. 😃
 
 ## 2. Unix Basic Command
 
-If it's possible you should develop app under Unix based OS, such as Ubuntu or MacOs. However, if you're choosing Windows as OS. It is recommended to use WSL [(Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/) while developing app to reduce any issue caused by Windows OS (trust me, most of the solution available online is using Unix command).
+If it's possible you should develop the app under Unix-based OS, such as Ubuntu or macOS. However, if you're choosing Windows as OS. It is recommended to use WSL [(Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/) while developing the app to reduce any issue caused by Windows OS (trust me, most of the solutions available online is using Unix command).
 
 The very basic Unix command you should know:
 
@@ -53,14 +53,14 @@ also bonus:
 ## 3. Python Virtual Environment (venv)
 ### Definition
 
-Basically, `venv` isolates `pip` & `python` installed packages from any other project. `venv` also helps to make our project lightweight because `venv` make sure we only pack our app with it's needed dependencies. Something like this:
+Basically, `venv` isolates `pip` & `python` installed packages from any other project. `venv` also helps to make our project lightweight because `venv` makes sure we only pack our app with it's needed dependencies. Something like this:
 ![python virtual environment](https://miro.medium.com/max/600/1*R8lpim7cQoZN1K31QcMBPw.jpeg)
 
-In the example above, there are 3 projects inside one computer. And each project needs different dependencies one to another. The first project need `Python 2.7` with 2 dependencies with certain version. While the other 2 projects uses entirely different Python version and dependencies version.
+In the example above, there are 3 projects inside one computer. And each project needs different dependencies from one to another. The first project needs `Python 2.7` with 2 dependencies with a certain version. While the other 2 projects use entirely different Python version and dependencies version.
 
 ### How to use them
 Make sure you've installed Python 3.6+
-There are multiple ways to create virtual environment, such as `venv`, `pyenv`, `pipenv`, etc.
+There are multiple ways to create a virtual environment, such as `venv`, `pyenv`, `pipenv`, etc.
 We mainly use the built-in virtual environment [`venv`](https://docs.python.org/3/library/venv.html)
 
 Commands:
@@ -77,7 +77,7 @@ Commands:
   If you check: 
     >`pip list`
 
-    this should only contains the essential python packages
+    this should only contain the essential python packages
 - >`deactivate` 
   
   to get out from the virtual environment
@@ -88,7 +88,7 @@ We have to generate `requirements.txt` in every project we created, with:
 
 >`pip freeze > requirements.txt`
 
-Please update the `requirements.txt` by each new installed packages in the project.
+Please update the `requirements.txt` for each newly installed packages in the project.
 
 With the `requirements.txt` exist in the project. We can install all the project's dependencies at once with:
 
