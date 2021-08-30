@@ -31,6 +31,12 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [Best practice](#best-practice)
       - [API](#api)
       - [Django](#django)
+  - [10. Cloud](#10-cloud)
+  - [11. Docker](#11-docker)
+  - [12. TDD / BDD](#12-tdd--bdd)
+  - [13. CI/CD](#13-cicd)
+  - [14. Agile](#14-agile)
+  - [15. Python Advanced Programming](#15-python-advanced-programming)
     - [VS Code Python Extensions](#vs-code-python-extensions)
     - [Data Structure & Algorithms](#data-structure--algorithms)
     - [Design Patterns](#design-patterns)
@@ -260,6 +266,15 @@ I don't know much. but
 > Fat models are preferred to fat views.
 
 Maybe [this](https://github.com/HackSoftware/Django-Styleguide) helps.
+
+
+## 10. Cloud
+## 11. Docker
+## 12. TDD / BDD
+## 13. CI/CD
+## 14. Agile
+
+## 15. Python Advanced Programming
 This is an advanced Python programming section. If you want to write Python code in a professional, faster, clean, and reusable way, please learn more from this section.
 
 ### VS Code Python Extensions
