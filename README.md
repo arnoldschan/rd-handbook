@@ -36,6 +36,12 @@ This handbook is specifically for R&D team focused on Python Backend engineering
       - [Django](#django)
   - [10. Cloud](#10-cloud)
   - [11. Docker](#11-docker)
+    - [Concept](#concept)
+    - [Installation](#installation)
+    - [Commands](#commands)
+      - [Listing all of the running container (ps)](#listing-all-of-the-running-container-ps)
+      - [Manage container](#manage-container)
+    - [`docker-compose`](#docker-compose)
   - [12. TDD / BDD](#12-tdd--bdd)
   - [13. CI/CD](#13-cicd)
   - [14. Agile](#14-agile)
@@ -313,6 +319,79 @@ However, now we are planning to Azure. So start to learn that as well :)
 
 
 ## 11. Docker
+### Concept
+![concept docker](https://docs.docker.com/engine/images/architecture.svg)
+
+We've mention docker earlier. It's simply a tool to create a virtual folder (called as `container` and its blueprint called as `image`) that has its own virtual environment. Docker is able to pack this virtual folder and it can be used in any other computer with any OS.
+
+The `images` are shared through `registry`, in our case, it's in LnData's git container registry. This `image` can be any service and OS you can imagine. in the example above, it can be as general as the `ubuntu` system or as specific as `redis` in-memory service.
+
+### Installation
+
+Check on the [installation](https://docs.docker.com/engine/install/) method
+and don't forget to do the [post installation](https://docs.docker.com/engine/install/linux-postinstall/) process.
+
+
+
+
+
+### Commands
+The main commands you should know:
+#### Listing all of the running container [(ps)](https://docs.docker.com/engine/reference/commandline/ps/)
+```
+docker ps [:args]
+```
+`args`: arguments like"-a" (optional) to also list the stopped container
+#### Manage container
+[Run](https://docs.docker.com/engine/reference/run/)
+```
+docker run [:options] [image name] [container name]
+```
+to run an `image`.
+
+However, to running a reusable service, we shouldn't only use `docker run`. `docker-compose` is a better way to run an image.
+
+[Stop](https://docs.docker.com/engine/reference/commandline/stop/)
+```
+docker stop [:options] [image name] [container name]
+```
+to stop a running container
+[Remove](https://docs.docker.com/engine/reference/commandline/rm/)
+```
+docker rm [container name]
+```
+to remove **stopped** container from the record. Make sure to remove them after stopping the container to release occupied resources, memory, and name.
+
+### `docker-compose`
+You can still manage docker containers without `docker-compose`. However, it is recommended way to run images because all of the commands and configurations are written in a file. Thus, we can track the change, reuse them, etc.
+[Learn more](https://docs.docker.com/compose/)
+
+Here is the example of `docker-compose.yml` the configuration file for `docker-compose`, assume the project is an API for Facebook crawling:
+```yml
+services:
+  api:
+    image: git.lndata.com:54088/rd_projects/crawlers-hub:staging
+    environment:
+      - ENV=STAGING
+    commands: python -m app.flask
+
+  worker_fb:
+    image: git.lndata.com:54088/rd_projects/crawlers-hub:staging
+    environment:
+      - ENV=STAGING
+    commands: celery -A app.celery worker -l -Q facebook info
+```
+There are 2 services for the project example above:
+- api: the API server
+- worker_fb: the worker consuming Facebook-related tasks
+
+The configuration for each of the services:
+- `image`: the blueprint of the Facebook crawler API docker image. `docker-compose` pulls the blueprint from `git.lndata.com:54088` with the image name `/rd_projects/crawlers-hub` and the tag of `staging`.
+- `environment`: the environment variable to configure the running container environment. In this example is `STAGING` one step before `PRODUCTION` environment.
+- `commands`: any script command to run inside the container. both of the services use the same blueprint of the project folder, but each run different command.
+  - The API service runs the python file for running `flask` API server.
+  - While the worker runs `celery` command to receive `facebook` related tasks.
+
 ## 12. TDD / BDD
 ## 13. CI/CD
 ## 14. Agile
