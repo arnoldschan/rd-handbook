@@ -24,6 +24,8 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [Linting](#linting)
   - [6. Additional Tools](#6-additional-tools)
   - [7. Git](#7-git)
+    - [Commit Standard](#commit-standard)
+    - [Branching Standard](#branching-standard)
   - [8. Crawler](#8-crawler)
     - [Crawler of choice](#crawler-of-choice)
     - [CrawlerHub](#crawlerhub)
@@ -209,6 +211,24 @@ Unless you're a terminal type of person you should learn at least:
 - git add [...]
 - git commit [...]
 - git push
+
+### Commit Standard
+- Commit at every small working code modification. Don't commit the whole change at once. Some strict git users even commit every 1 minute!
+- Use the [Conventional Commit](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits) to have a standardized commit. Short clue:
+    ```
+    {topic}{scope}: {description}
+    ```
+    - `topic`: one of [topics](https://dev.to/couchcamote/git-branching-name-convention-cch) (`features`, `bugfix`, etc..)
+    - `scope`: where the modification taking place, such as `UI`, `model`, `formula`, `IG-crawler`, anything you want!
+    - `description`: short information of the change
+### Branching Standard
+```
+{topic}/{branch-name}
+```
+- topic: one of [topics](https://dev.to/couchcamote/git-branching-name-convention-cch) (`features`, `bugfix`, etc..)
+- branch-name: short information of the purpose of the branch (example: "modify-calculation-API")
+
+  so the branch name will be `features/modify-calculation-API`
 
 ## 8. Crawler
 Crawling data is the backbone of our social tools.
