@@ -10,6 +10,7 @@ This handbook is specifically for R&D team focused on Python Backend engineering
   - [Table of Contents](#table-of-contents)
   - [1. Company Values & Vision](#1-company-values--vision)
   - [2. Unix Basic Command](#2-unix-basic-command)
+    - [also bonus:](#also-bonus)
   - [3. Python Virtual Environment (venv)](#3-python-virtual-environment-venv)
     - [Definition](#definition)
     - [How to use them](#how-to-use-them)
@@ -69,7 +70,7 @@ If it's possible you should develop the app under Unix-based OS, such as Ubuntu 
 The very basic Unix command you should know:
 
 [HERE](https://www.guru99.com/must-know-linux-commands.html) (mainly `cd`, `ls`, `rm`, `cp`, `mv`, `cat`, `mkdir`)
-also bonus:
+### also bonus:
 
 - `ssh` (connect to another computer),
 - `scp` (copy file to another computer)
