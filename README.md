@@ -298,6 +298,20 @@ Maybe [this](https://github.com/HackSoftware/Django-Styleguide) helps.
 
 
 ## 10. Cloud
+From the beginning, we've been using AWS as our cloud computing provider. Most of the operations are done through AWS Dashboard.
+
+Usually, we work close with [EC2](https://aws.amazon.com/ec2/?nc2=h_ql_prod_fs_ec2&ec2-whats-new.sort-by=item.additionalFields.postDateTime&ec2-whats-new.sort-order=desc), literally just another machine located somewhere else that you can connect to. Connect through [SSH](#also-bonus) with [Termius](https://termius.com/)
+
+We have been using other services like:
+- [`ECS`](https://aws.amazon.com/ecs/): we found it's a hassle to modify the configuration because it's not like docker-compose. Plus, we've been planning to move to Azure, so ECS is a no-no 
+- [`ECR`](https://aws.amazon.com/ecr/): we use our own Gitlab container
+- [`CloudFormation`](https://aws.amazon.com/cloudformation/): Good choice for [IaaC](https://stackify.com/what-is-infrastructure-as-code-how-it-works-best-practices-tutorials/), then moved to [Terraform](https://www.terraform.io/) for more cloud-agnostic option, then we just move to a simple docker-compose for a more flexible and easier option.
+-  `RDS`, `DynamoDB`, `ElasticCache`: So far most of the projects are small, we prefer to use ad-hoc SQL, NoSQL, and Redis
+-  etc
+
+However, now we are planning to Azure. So start to learn that as well :)
+
+
 ## 11. Docker
 ## 12. TDD / BDD
 ## 13. CI/CD
