@@ -281,6 +281,14 @@ We have Flask as the framework for the older project (such as CrawlerHub). Howev
 So far we are still learning how to create a better API.
 
 One thing that we know we shouldn't do is having API without doing a [versioning](https://www.django-rest-framework.org/api-guide/versioning/). This will create an inconsistent API and will be a hard time for any of the project that uses the API.
+The way we do the management of codebase version:
+```
+.
+├── api
+    ├── v1
+    └── v2
+```
+the codebase for `v2` is literally a copy-paste version from `v1` with the intended adjustment change.
 
 #### Django
 I don't know much. but
