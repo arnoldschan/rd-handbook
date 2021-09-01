@@ -43,6 +43,10 @@ This handbook is specifically for R&D team focused on Python Backend engineering
       - [Manage container](#manage-container)
     - [`docker-compose`](#docker-compose)
   - [12. TDD / BDD](#12-tdd--bdd)
+    - [Test files](#test-files)
+    - [TDD](#tdd)
+    - [Coverage](#coverage)
+    - [BDD](#bdd)
   - [13. CI/CD](#13-cicd)
   - [14. Agile](#14-agile)
   - [15. Python Advanced Programming](#15-python-advanced-programming)
@@ -393,6 +397,30 @@ The configuration for each of the services:
   - While the worker runs `celery` command to receive `facebook` related tasks.
 
 ## 12. TDD / BDD
+### Test files
+To make sure the whole app is working well in every new modification, we need to write the test files.
+
+For example, if you create a function `multiplication` function we should make sure `2*2=4` or `5*2=10`. In python we usually use simple [`pytest`](https://docs.pytest.org/en/6.2.x/).
+
+### TDD
+TDD is a concept to write your test files first before creating the function. So if you want to make `multiplication` function, you can write the test files first. Then, modify your code one by one until it gives a correct result. This way, you won't miss writing test files, and also the function integrity would not be questioned. [Learn more](https://stackabuse.com/test-driven-development-with-pytest/)
+
+### Coverage
+In addition to testing the correctness of the code, we also need to check if the unit test cover the whole line of code. For example if you have this function:
+```python
+1 def divide(num1, num2):
+2  if num2 == 0:
+3    raise ValueError("Cannot divide by 0!")
+4  return num1 * num2
+```
+but we only have a test file to check everything (ex: `divide(1,2) == 0.5`, `divide(4,2)==2`, etc) but not `divide(1,0)` (divide by 0), the test file is not cover the function well enough.
+
+In this case, the coverage will only be: `50%` (line 1 and 4) because the test files never test line 2 and 3. 
+
+### BDD
+```
+TO DO
+```
 ## 13. CI/CD
 ## 14. Agile
 
