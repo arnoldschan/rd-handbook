@@ -50,6 +50,10 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [BDD](#bdd)
   - [13. CI/CD](#13-cicd)
   - [14. Agile](#14-agile)
+    - [Concept](#concept-1)
+    - [Scrum - Agile Methodology](#scrum---agile-methodology)
+      - [Roles](#roles)
+      - [Highlights](#highlights-1)
   - [15. Python Advanced Programming](#15-python-advanced-programming)
     - [VS Code Python Extensions](#vs-code-python-extensions)
     - [Data Structure & Algorithms](#data-structure--algorithms)
@@ -451,6 +455,35 @@ The CI/CD script itself is custom-made by the programmer entitled with DevOps po
 
 Not everyone has to be able to write the script. But it's a nice skill to have!
 ## 14. Agile
+### Concept
+
+Agile is a framework for the project and team management. Maybe you're not the one who manages people, but you need to understand the concept to be able to follow the project manager!
+
+Agile has these values:
+![agile](attachment/assets/agile.PNG)
+
+[Learn more](https://www.atlassian.com/agile)
+### Scrum - Agile Methodology
+In every project we've been working on, we implement Scrum. Even the daily huddle we have every morning at 9.50 am is also one of the Scrum methods
+
+#### Roles
+Scrum separates people in the project into roles:
+- **Project Owner** (PO): A person who knows which is the priority, what features to implement, etc. Usually, the one who works closely with the client, the user.
+- **Scrum Master**: A person that controls the team to follow the Scrum rules. Have to understand the Scrum values, concepts, and practices. Usually anyone in the team except PO.
+- **Team member**: Every member who adds value to the product and makes happen the product requirement. Yes, probably it's you!
+
+#### Highlights
+![scrum](attachment/assets/scrum.png)
+- Every project applies scrum sprint. One sprint can be 1 week - 2 weeks. We have to set a sprint goal in each of the sprints. 
+- In each of the scrum sprints, we select tasks for each person depending on the workload that each person can handle
+- Each project runs daily scrum, answering:
+  - What did I do yesterday?
+  - What do I plan to do today?
+  - Are there any obstacles?
+- And by the end of each scrum sprint, each project runs:
+  - [Sprint Review](https://www.atlassian.com/agile/scrum/sprint-reviews): Reviewing the result of the sprint, also plan & select for the next sprint 
+  - [Sprint Retrospective](https://www.atlassian.com/agile/scrum/retrospectives): It's like the sprint review but more about everything else, not the result. It can be the review of the teamwork, the management, etc
+   
 
 ## 15. Python Advanced Programming
 This is an advanced Python programming section. If you want to write Python code in a professional, faster, clean, and reusable way, please learn more from this section.
