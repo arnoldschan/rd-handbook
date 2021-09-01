@@ -59,6 +59,7 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [Data Structure & Algorithms](#data-structure--algorithms)
     - [Design Patterns](#design-patterns)
     - [OOP principles: SOLID](#oop-principles-solid)
+  - [Closing](#closing)
 
 
 TODO:
@@ -524,4 +525,19 @@ https://refactoring.guru/design-patterns/python
 ### OOP principles: SOLID
 https://levelup.gitconnected.com/s-o-l-i-d-principles-explained-in-python-with-examples-83b2b43bdcde
 
-And so on... 
+And so on...
+
+## Closing
+Thank you for reading this handbook.
+
+Please don't hesitate to update this handbook if there's a change in LnData or you have something interesting to share.
+
+Hope you can enjoy the time learning together in LnData!
+______
+2021/09/01
+
+Arnold Samuel Chan 曾小龍
+
+Python Apps Engineer, Full Stack Engineer
+
+arnold.chan@lndata.com
