@@ -443,6 +443,13 @@ In this case, the coverage will only be: `50%` (line 1 and 4) because the test f
 TO DO
 ```
 ## 13. CI/CD
+We have mentioned CI/CD before in the git section. As we have discussed, CI/CD works close with git.
+- The Continuous Integration scripts are executed as the programmer push/merge. `CI` makes sure there's no code conflict in a single codebase with multiple programmers. Also able to check if the new change can run correctly (related to [test files](#test-files))
+- The Continuous Deployment scripts automatically deploy the code to the target environment. So after the `PR` is accepted, the new feature will be available on the target environment (for example testing environment). So no more manually build and deploy the new change!
+
+The CI/CD script itself is custom-made by the programmer entitled with DevOps position (you can also create it on your own!). This script is stored in every project's root directory named `.gitlab-ci.yml`. Gitlab will automatically read this file to execute the CI/CD script.
+
+Not everyone has to be able to write the script. But it's a nice skill to have!
 ## 14. Agile
 
 ## 15. Python Advanced Programming
