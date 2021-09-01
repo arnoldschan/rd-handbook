@@ -24,6 +24,7 @@ This handbook is specifically for R&D team focused on Python Backend engineering
     - [Linting](#linting)
   - [6. Additional Tools](#6-additional-tools)
   - [7. Git](#7-git)
+    - [Git Flow](#git-flow)
     - [Commit Standard](#commit-standard)
     - [Branching Standard](#branching-standard)
   - [8. Crawler](#8-crawler)
@@ -221,6 +222,26 @@ Unless you're a terminal type of person you should learn at least:
 - git add [...]
 - git commit [...]
 - git push
+
+
+### Git Flow
+All of the projects have to have at least:
+- `master` branch: this branch is the "production" version of the project
+  
+For bigger projects, we also have one version before the "production":
+- `develop` branch: all of the changes made are merged here
+  
+![gitflow](./attachment/assets/gitflow.PNG)
+
+1. Any new change has to be made in `feature` branch (in red). Usually, one person will take care of one small part of changes in this `feature` branch.
+2. All of the modifications from multiple programmers are merged into `develop` branch. The merging process is called `Pull Request (PR)`.
+3. In `PR`, you can write any information related to your change. And make sure you appoint any other programmer for peer-to-peer review (code review) and they can help you to merge the change.
+   - In `PR` an automatic checking is also usually executed (Continuous integration (`CI`)
+   - or if the code also want to be tested online, continuous deployment can be executed after the merge 
+4. Through code review, your code would be checked by another member. This way, any inconsistent/inefficient code can be further reduced.
+5. We do the same to `master` branch as well. But here we usually assign higher/senior programmers to avoid a breakdown in `production`.
+
+Git & CI/CD are related very closely. We have [this](https://docs.google.com/presentation/d/1VMmSTcqo1yBMBMS1B98QX0TspYaMWs_YH53J8oHkc4c/edit?usp=sharing) introduction slides if you want to know more.
 
 ### Commit Standard
 - Commit at every small working code modification. Don't commit the whole change at once. Some strict git users even commit every 1 minute!
