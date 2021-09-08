@@ -63,12 +63,7 @@ This handbook is specifically for R&D team focused on Python Backend engineering
 
 
 TODO:
-- Crawling
-- API
-- Cloud
-- Docker
-- CI/CD
-- Agile
+-  Example / short practice in each of the topics
 
 ## 1. Company Values & Vision
 
